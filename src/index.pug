@@ -1,0 +1,64 @@
+doctype html
+html(lang="en")
+  head
+    meta(charset="UTF-8")
+    meta(http-equiv="X-UA-Compatible", content="IE=edge")
+
+    //- 新增maximum-scale=1.0,user-scalable=0防止手機點擊表單畫面放大
+    meta(name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0")
+    
+    //- 防止iphone自動加入撥號連結
+    meta(http-equiv="x-rim-auto-match" content="none") 
+    meta(name="format-detection" content="telephone=no")
+    
+    //- 網頁描述 
+    meta(name="description" content="CJIE | 個人網站")
+
+    //- 教學用網站，因此設置此 meta 防止瀏覽器索引
+    meta(name="robots" content="noindex, nofollow")
+    
+    //- CSS 
+    link(rel="stylesheet", href="./css/style.css")
+
+    //- 網頁列icon 
+    link(rel="shortcut icon" href="./img/letter-c.png" type="image/png") 
+    link(rel="apple-touch-icon" href="./img/letter-c.png")
+
+    title CJIE | 個人網站
+  body 
+    .l-index 
+      .c-navbar
+        ul.c-navbar__wrap
+          li.c-list
+            a.u-font-ch(href="index.html") 首頁 
+          li.c-list
+            a.u-font-ch(href="about.html") 關於我
+          li.c-list
+            a.u-font-ch(href="portfolio.html") 作品集
+      .l-index__proflie 
+        .l-index__img-mask 
+          img(src="./img/selfie.jpeg", alt="自拍照")
+        .l-index__content 
+          h2.l-index__title.u-font-ch 廖宸嘉
+          p.l-index__text.u-font-ch 也可以叫我CJ
+          p.l-index__text.u-font-ch 朝陽科技大學資管系畢業
+          p.l-index__text.u-font-ch 正在往前端工程師前進
+      .c-footer
+        .c-footer__wrap
+          .c-footer__content
+            a(href="https://www.instagram.com/cjie_llll/") 
+              i.c-footer__item.fa-brands.fa-instagram.u-fz-50
+              p.c-footer__item.u-text-sm.u-font-en CJ
+          .c-footer__content 
+            p.c-footer__item.u-text-lg.u-font-en.u-fw-800 Email 
+            p.c-footer__item.u-text-sm.u-font-en will891108@gmail.com
+          .c-footer__content 
+            a(href="https://codepen.io/CJIE_L") 
+              i.c-footer__item.fa-brands.fa-codepen.u-fz-50
+      .c-marquee
+        .c-marquee__content
+          marquee.u-font-ch.u-text-lg(scrollamount="10") 「你會記得你吃過多少片麵包嗎」-- 迪奧·布蘭度
+          //- 之後再來更新跑馬燈
+        
+    //- 引入icon
+    script(src="https://kit.fontawesome.com/c85166bbba.js" crossorigin="anonymous")

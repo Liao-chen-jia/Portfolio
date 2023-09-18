@@ -1,0 +1,24 @@
+.c-footer
+  width: 90%
+  height: 100px
+  background-color: var(--color-primary)
+  border-top: 1px solid var(--color-secondary)
+  display: flex
+  align-items: center
+  margin: 0 auto
+  &__wrap
+    display: flex
+    justify-content: flex-start
+    margin-left: var(--space-80)
+  &__content
+    display: flex
+    align-items: flex-end
+    a
+      display: flex
+      align-items: flex-end
+    .c-footer__item
+      &:first-child
+        margin-right: var(--space-20)
+    &:not(:first-of-type)
+      margin-left: calc(var(--space-80) * 1.5 )
+    

@@ -1,0 +1,38 @@
+@import url('https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@10..48,400;10..48,500;10..48,800&family=Noto+Sans+TC:wght@400;500;900&display=swap')
+ 
+*
+  -webkit-font-smoothing: antialiased
+  box-sizing: border-box
+
+html
+  height: 100%
+  font-size: calc(16px / 1.6)
+  @media (max-width: 768px)
+    font-size: calc(15px / 1.6)
+
+body
+  height: 100%
+  margin: 0
+  background-color: var(--color-primary)
+
+/* ----------------------------------- */
+/* ------ Resets ------ */
+/* ----------------------------------- */
+a
+  display: inline-block
+  text-decoration: none
+  // inherit 繼承
+  color: inherit
+  &:hover
+    color: inherit
+
+img
+  max-width: 100%
+
+h1, h2, h3, h4, h5, h6, p
+  margin: 0
+
+ul, ol
+  list-style: none
+  padding: 0
+  margin: 0
