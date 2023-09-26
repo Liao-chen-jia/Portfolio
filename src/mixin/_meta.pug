@@ -1,0 +1,20 @@
+mixin MetaManger
+  meta(charset="UTF-8")
+  meta(http-equiv="X-UA-Compatible", content="IE=edge")
+
+  //- 新增maximum-scale=1.0,user-scalable=0防止手機點擊表單畫面放大
+  meta(name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0")
+  
+  //- 防止iphone自動加入撥號連結
+  meta(http-equiv="x-rim-auto-match" content="none") 
+  meta(name="format-detection" content="telephone=no")
+  
+  //- 網頁描述 
+  meta(name="description" content="CJIE | 個人網站")
+
+  //- 教學用網站，因此設置此 meta 防止瀏覽器索引
+  meta(name="robots" content="noindex, nofollow")
+  
+  //- 網頁列icon 
+  link(rel="shortcut icon" href="./img/letter-c.png" type="image/png") 
+  link(rel="apple-touch-icon" href="./img/letter-c.png")

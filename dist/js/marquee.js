@@ -1,0 +1,1 @@
+"use strict";!function(){function e(){return window.innerWidth}!function(){let t=document.querySelector(".c-marquee__text"),n=e();setInterval((()=>{n<-1*document.querySelector(".c-marquee__text").offsetWidth&&(n=e()),n-=1,t.style.left=n+"px"}),1)}()}();
