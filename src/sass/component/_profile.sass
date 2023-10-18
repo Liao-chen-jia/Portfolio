@@ -1,6 +1,7 @@
-.l-portfolio
+.c-profile
   &__wrap
     display: flex
+    justify-content: center
     +media(sm)
       display: none
   &__profile
@@ -8,11 +9,11 @@
     flex-direction: column
     justify-content: center
     align-items: center
-    padding: 10vw 10vw
-    // border-right: 1px solid var(--color-secondary)
-  &__img-mask
-    img
-      max-width: 300px
+    padding: 10vw 0
+  &__img
+      max-width: 30rem
+      +media(md)
+        max-width: 20rem
   &__content
     text-align: center
     text-decoration: underline
@@ -22,6 +23,4 @@
   &__text
     font-size: var(--space-20)
     padding: var(--space-10) 0
-  &__introduce
-    padding: 10vw 0
-    color: var(--color-secondary)
+

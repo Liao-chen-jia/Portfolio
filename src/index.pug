@@ -12,9 +12,9 @@ html(lang="en")
   body
     include ./mixin/component/_navbar.pug
     include ./mixin/component/_footer.pug 
-    .l-index 
+    main.l-index 
       +Header
-      .l-index__proflie 
+      section.l-index__proflie 
         .l-index__img-mask 
           img(src="./img/selfie.jpeg", alt="自拍照")
         .l-index__content 
@@ -25,7 +25,8 @@ html(lang="en")
       -
         const Portfolio = {
           name: 'CJ',
-          email: 'will891108@gmail.com'
+          email: 'will891108@gmail.com',
+          dcname: 'cjie_l'
         }
       +Footer(Portfolio)
       .c-marquee

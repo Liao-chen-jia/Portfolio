@@ -12,30 +12,26 @@ html(lang="en")
   body
     include ./mixin/component/_navbar.pug
     include ./mixin/component/_footer.pug 
-    .l-portfolio
-      +Header
-      .l-portfolio__wrap
-        .l-portfolio__profile
-          .l-portfolio__img-mask 
-            img(src="./img/selfie.jpeg", alt="自拍照")
-          .l-portfolio__content 
-            h2.l-portfolio__title.u-font-ch 廖宸嘉
-            p.l-portfolio__text.u-font-ch 也可以叫我CJ
-            p.l-portfolio__text.u-font-ch 朝陽科技大學資管系畢業
-            p.l-portfolio__text.u-font-ch 正在往前端工程師前進
-        .l-portfolio__introduce
-          p.l-portfolio__text 目前還沒想到要打什麼~~
-          p.l-portfolio__text 往後在更新。
+    include ./mixin/component/_profile.pug
+    +Header
+    main.l-about
+      .container-fluid
+        .row
+          .col-4
+            +Profile
+          .col-8
       -
         const Portfolio = {
           name: 'CJ',
-          email: 'will891108@gmail.com'
+          email: 'will891108@gmail.com',
+          dcname: 'cjie_l'
         }
       +Footer(Portfolio)
       .c-marquee
         .c-marquee__content
-          marquee.u-font-ch.u-text-lg(scrollamount="10") 「你會記得你吃過多少片麵包嗎」-- 迪奧·布蘭度
-          //- 之後再來更新跑馬燈
+          .c-marquee__text.u-font-ch.u-text-lg 「你會記得你吃過多少片麵包嗎」-- 迪奧·布蘭度
 
     //- 引入icon
     script(src="https://kit.fontawesome.com/c85166bbba.js" crossorigin="anonymous")
+    script(src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ" crossorigin="anonymous")
+    script(src="js/marquee.js")
