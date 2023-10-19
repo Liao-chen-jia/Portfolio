@@ -1,9 +1,15 @@
 .c-navbar
   +size(100%, 10rem)
   background-color: var(--color-secondary)
+  position: fixed
+  top: 0
+  left: 0
   display: flex
   justify-content: flex-start
   align-items: center
+  z-index: 999
+  +media(xl)
+    justify-content: center
   &__wrap
     display: flex
     margin: 0 var(--space-80)

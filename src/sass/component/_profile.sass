@@ -1,15 +1,16 @@
 .c-profile
-  &__wrap
-    display: flex
-    justify-content: center
-    +media(sm)
-      display: none
+  position: fixed
+  top: 10rem
+  left: 16.7%
+  transform: translateX(-50%)
+  +media(sm)
+    display: none
   &__profile
     display: flex
     flex-direction: column
     justify-content: center
     align-items: center
-    padding: 10vw 0
+    padding-top: 10vw
   &__img
       max-width: 30rem
       +media(md)

@@ -16,19 +16,13 @@ html(lang="en")
       +Header
       section.l-index__proflie 
         .l-index__img-mask 
-          img(src="./img/selfie.jpeg", alt="自拍照")
+          img.l-index__img(src="./img/selfie.jpeg", alt="自拍照")
         .l-index__content 
           h2.l-index__title.u-font-ch 廖宸嘉
           p.l-index__text.u-font-ch 也可以叫我CJ
           p.l-index__text.u-font-ch 朝陽科技大學資管系畢業
           p.l-index__text.u-font-ch 正在往前端工程師前進
-      -
-        const Portfolio = {
-          name: 'CJ',
-          email: 'will891108@gmail.com',
-          dcname: 'cjie_l'
-        }
-      +Footer(Portfolio)
+      +Footer
       .c-marquee
         .c-marquee__content
           .c-marquee__text.u-font-ch.u-text-lg 「你會記得你吃過多少片麵包嗎」-- 迪奧·布蘭度

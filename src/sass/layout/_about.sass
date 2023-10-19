@@ -1,15 +1,50 @@
 .l-about
   // display: flex
+  margin-top: 10rem
+  height: 100%
+  &__container
+    //- 內建的有一小空間的padding，把它拿掉
+    padding-left: 0
+    padding-right: 0
+  &__row
+    //- 把col中間的gutter拿掉
+    --bs-gutter-x: 0
   &__profile
+    border-right: 1px solid var(--color-secondary)
     +media(sm)
       display: none
-  &__introduce
-    height: 100%
-    display: flex
-    flex-direction: column
-    justify-content: space-around
-    padding: 0 5rem
+  &__wrap
+    //- 每一個撐滿80視窗高度
+    height: 80vh
   &__content
-    font-size: 2rem
-    +media(xl)
-      font-size: 1.6rem
+    //- 內容格子css設定
+    position: relative
+    top: 50%
+    transform: translateY(-50%)
+    +size(60%, 50%)
+    right: 0
+    &.--left
+      left: 0
+      border-radius: 0 5rem 5rem 0
+      background-repeat: no-repeat
+      background-size: cover
+      background-position: center center
+      background-color: rgba(251,54,64, 0.6)
+      background-blend-mode: overlay
+      background-image: url(../img/school.jpg)
+    &.--right
+      left: 100%
+      border-radius: 5rem 0 0 5rem
+      transform: translate(-100%, -50%)
+      // background-color: var(--color-third)
+  &__text
+    //- 文字設定
+    position: absolute
+    top: 50%
+    transform: translateY(-50%)
+    width: 100rem
+    font-size: 5rem
+    &.--left
+      left: 30%
+    &.--right
+      right: 30%

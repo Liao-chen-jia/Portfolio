@@ -15,24 +15,31 @@ html(lang="en")
     include ./mixin/component/_profile.pug
     +Header
     main.l-about
-      .container-fluid
-        .row
+      .container-fluid.l-about__container
+        .row.l-about__row
           .col-4.l-about__profile
             +Profile
           .col-8
             section.l-about__introduce
-              .l-about__content 我是一位擁有大學學位的畢業生，對前端工程師的職業充滿熱情，並已積極學習和掌握了多項關鍵技能，以迎接這個激動人心的挑戰。我的學習過程不僅讓我熟悉了HTML、CSS和JavaScript這些網頁開發的基本技術，還使我熟悉了許多相關的工具和框架。
-              .l-about__content 我精通RWD（響應式網頁設計），這使我能夠設計和開發適應不同設備和螢幕尺寸的網站，提供更好的使用體驗。此外，我熟練地運用Bootstrap，這個流行的前端框架，可以加速開發過程，並確保網站的外觀和功能符合現代標準。
-              .l-about__content 我也擅長使用Swiper，一個強大的輪播插件，以實現精美的圖片輪播效果，以及AOS（Animate on Scroll）來添加滾動時的動畫效果，提升網站的互動性和吸引力。此外，我熟悉Font Awesome，這個矢量圖標庫，以豐富網站的視覺元素，提供更好的用戶體驗。
-              .l-about__content 我對網頁開發有深刻的理解，並總是追求最佳的代碼品質和性能優化。我喜歡挑戰自己，學習新的前端技術和趨勢，以確保我保持在這個快速變化的領域中的競爭力。我也善於團隊合作，具有良好的溝通和問題解決能力，這使我能夠與設計師、後端工程師和其他相關利益者合作，實現項目的成功。
-              .l-about__content 總的來說，我是一位熱衷於前端開發的大學畢業生，擁有廣泛的技能和知識，並期待在這個令人興奮的領域中做出貢獻。我渴望挑戰，不斷學習，並努力實現優秀的前端工程師的目標。
-      -
-        const Portfolio = {
-          name: 'CJ',
-          email: 'will891108@gmail.com',
-          dcname: 'cjie_l'
-        }
-      +Footer(Portfolio)
+              .l-about__wrap
+                .l-about__content.--left
+                  .l-about__text.--left 我是一位擁有大學學位的畢業生，對前端工程師的職業充滿熱情，並已積極學習和掌握了多項關鍵技能，以迎接這個激動人心的挑戰。
+              .l-about__wrap
+                .l-about__content.--right
+                  .l-about__text.--right 我精通RWD（響應式網頁設計），這使我能夠設計和開發適應不同設備和螢幕尺寸的網站，提供更好的使用體驗。
+              .l-about__wrap
+                .l-about__content.--left
+                  .l-about__text.--left 我是一位擁有大學學位的畢業生，對前端工程師的職業充滿熱情，並已積極學習和掌握了多項關鍵技能，以迎接這個激動人心的挑戰。
+              .l-about__wrap
+                .l-about__content.--right
+                  .l-about__text.--right 我精通RWD（響應式網頁設計），這使我能夠設計和開發適應不同設備和螢幕尺寸的網站，提供更好的使用體驗。
+              .l-about__wrap
+                .l-about__content.--left
+                  .l-about__text.--left 我是一位擁有大學學位的畢業生，對前端工程師的職業充滿熱情，並已積極學習和掌握了多項關鍵技能，以迎接這個激動人心的挑戰。
+              .l-about__wrap
+                .l-about__content.--right
+                  .l-about__text.--right 我精通RWD（響應式網頁設計），這使我能夠設計和開發適應不同設備和螢幕尺寸的網站，提供更好的使用體驗。
+      +Footer
       .c-marquee
         .c-marquee__content
           .c-marquee__text.u-font-ch.u-text-lg 「你會記得你吃過多少片麵包嗎」-- 迪奧·布蘭度
