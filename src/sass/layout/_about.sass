@@ -20,7 +20,7 @@
     align-items: center
     justify-content: center
   &__introduction
-    margin-top: 30vh
+    margin-top: 25vh
   &__box
     display: flex
   &__introduction-content
@@ -68,9 +68,18 @@
       width: 90vw
       font-size: 1.6rem
   &__ability
-    margin-top: 25vh
+    margin-top: 30vh
   &__ability-box
-    --bs-gutter-x: 0
+    width: 60rem
+    +media(md)
+      width: 50rem
+    +media(sm)
+      width: 90vw
+      align-items: center
+    display: flex
+    flex-direction: column
+    justify-content: flex-start
+    align-items: flex-start
   &__ability-contentbox
     display: flex
   &__ability-content
@@ -79,6 +88,9 @@
     +size(10rem)
     +media(md)
       +size(8rem)
+    +media(sm)
+      +size(6rem)
+      font-size: 1.2rem
     border-radius: 50%
     display: flex
     justify-content: center
@@ -87,7 +99,38 @@
     &:not(:first-child)
       margin-left: var(--space-20)
   &__other
-    height: 50vh
+    margin-top: 25vh
+  &__other-box
+    width: 60rem
+    +media(md)
+      width: 50rem
+    +media(sm)
+      width: 90vw
+      align-items: center
+    display: flex
+    flex-direction: column
+    justify-content: flex-start
+    align-items: flex-start
+  &__other-contentbox
+    display: flex
+  &__other-content
+    //- 之後再挑合適的顏色
+    background-color: #944BBB
+    +size(10rem)
+    +media(md)
+      +size(8rem)
+    +media(sm)
+      +size(6rem)
+      font-size: 1.2rem
+    border-radius: 50%
+    text-align: center
+    padding: 1rem
+    display: flex
+    justify-content: center
+    align-items: center
+    flex-shrink: 0
+    &:not(:first-child)
+      margin-left: var(--space-20)
   &__title
     font-weight: 900
   

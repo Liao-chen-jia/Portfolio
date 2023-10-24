@@ -20,44 +20,59 @@ html(lang="en")
           .col-md-4.l-about__profile
             +Profile
           .col-md-8
+
             section.l-about__wrap.l-about__introduction
               h2.l-about__title.u-title-lg.u-font-ch 簡介
               .l-about__box.u-mt-50
                 .l-about__introduction-content.u-font-ch 畢業於朝陽科技大學
                 .l-about__introduction-content.u-font-ch 自學前端技術9個月
                 .l-about__introduction-content.u-font-ch 目標成為全端工程師
+
             section.l-about__wrap.l-about__Self 
               h2.l-about__title.u-title-lg.u-font-ch 自我介紹
               //- 到時候再來改自我介紹的內容
               .l-about__Self-content.u-mt-50.u-font-ch 我是一位擁有大學學位的畢業生，對前端工程師的職業充滿熱情，並已積極學習和掌握了多項關鍵技能，以迎接這個激動人心的挑戰。#[br]我的學習過程不僅讓我熟悉了HTML、CSS和JavaScript這些網頁開發的基本技術，還使我熟悉了許多相關的工具和框架。#[br]我精通RWD（響應式網頁設計），這使我能夠設計和開發適應不同設備和螢幕尺寸的網站，提供更好的使用體驗。此外，我熟練地運用Bootstrap，這個流行的前端框架，可以加速開發過程，並確保網站的外觀和功能符合現代標準。
+              
             section.l-about__wrap.l-about__ability
               h2.l-about__title.u-title-lg.u-font-ch 能力
               //- 這個類似像物件的，之後改成component
               //- content都可以改成icon，之後換成icon
-              .container-fluid
-                .row.row-cols-1
-                  .col.l-about__ability-box.u-mt-50
-                    h3.l-about__ability-title.u-mb-10.u-font-en Front-End
-                    .l-about__ability-contentbox
-                      .l-about__ability-content.u-text-md.u-font-en Html5
-                      .l-about__ability-content.u-text-md.u-font-en Pug
-                      .l-about__ability-content.u-text-md.u-font-en Css3
-                      .l-about__ability-content.u-text-md.u-font-en Sass
-                      .l-about__ability-content.u-text-md.u-font-en JS
-                  .col.l-about__ability-box.u-mt-20
-                    h3.l-about__ability-title.u-mb-10.u-font-en Design
-                    .l-about__ability-contentbox
-                      .l-about__ability-content.u-text-md AI
-                      .l-about__ability-content.u-text-md PS
-                      .l-about__ability-content.u-text-md Figma
-                  .col.l-about__ability-box.u-mt-20
-                    h3.l-about__ability-title.u-mb-10.u-font-ch 其他
-                    .l-about__ability-contentbox
-                      .l-about__ability-content.u-text-md Git版控
-                      .l-about__ability-content.u-text-md Bootstrap
-                      .l-about__ability-content.u-text-md 
+              .l-about__ability-box.u-mt-50
+                h3.l-about__ability-title.u-mb-10.u-font-en Front-End
+                .l-about__ability-contentbox
+                  .l-about__ability-content.u-text-md.u-font-en Html5
+                  .l-about__ability-content.u-text-md.u-font-en Pug
+                  .l-about__ability-content.u-text-md.u-font-en Css3
+                  .l-about__ability-content.u-text-md.u-font-en Sass
+                  .l-about__ability-content.u-text-md.u-font-en JS
+              .l-about__ability-box.u-mt-20
+                h3.l-about__ability-title.u-mb-10.u-font-en Design
+                .l-about__ability-contentbox
+                  .l-about__ability-content.u-text-md AI
+                  .l-about__ability-content.u-text-md PS
+                  .l-about__ability-content.u-text-md Figma
+              .l-about__ability-box.u-mt-20
+                h3.l-about__ability-title.u-mb-10.u-font-ch 其他
+                .l-about__ability-contentbox
+                  .l-about__ability-content.u-text-md Git版控
+                  .l-about__ability-content.u-text-md Bootstrap
+
             section.l-about__wrap.l-about__other
               h2.l-about__title.u-title-lg.u-font-ch 其他
+              .l-about__other-box.u-mt-50
+                h3.l-about__other-title.u-mb-10.u-font-en English
+                .l-about__other-contentbox.u-mt-20
+                  .l-about__other-content.u-text-md.u-font-ch 聽/略懂
+                  .l-about__other-content.u-text-md.u-font-ch 說/略懂
+                  .l-about__other-content.u-text-md.u-font-ch 讀/略懂
+                  .l-about__other-content.u-text-md.u-font-ch 寫/略懂
+              .l-about__other-box.u-mt-20.u-mb-200
+                h3.l-about__other-title.u-mb-10.u-font-ch 駕照
+                .l-about__other-contentbox
+                  .l-about__other-content.u-text-md.u-font-ch 一般機車駕照
+                  .l-about__other-content.u-text-md.u-font-ch 一般客車駕照
+
+
       +Footer
       .c-marquee
         .c-marquee__content

@@ -10,7 +10,7 @@
     flex-direction: column
     justify-content: center
     align-items: center
-    padding-top: 10vw
+    padding-top: 15vh
   &__img
       max-width: 30rem
       +media(md)
@@ -28,9 +28,10 @@
     margin-top: var(--space-10)
   &__icon
     font-size: var(--space-30)
-    transition: color 0.5s
+    transition: color 0.5s, opacity 0.5s
     &:not(:first-child)
       margin-left: var(--space-20)
     &:hover
       color: var(--color-third)
+      opacity: 0.8
 
