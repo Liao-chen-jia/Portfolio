@@ -2,11 +2,13 @@
   width: 90%
   background-color: var(--color-primary)
   border-top: 1px solid var(--color-secondary)
-  display: flex
+  display: none
   align-items: center
   //margin 使footer在畫面中間
   margin: 0 auto
   padding: 2rem 0
+  &.is-actived
+    display: flex
   +media(xl)
     flex-direction: column
     padding: 0

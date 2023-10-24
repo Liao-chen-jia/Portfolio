@@ -16,7 +16,7 @@ html {
 }
 
 body {
-  height: 100%;
+  padding: 0;
   margin: 0;
   background-color: var(--color-primary);
 }
@@ -52,6 +52,7 @@ ul, ol {
   --color-secondary: #1B1F3B;
   --color-third: #FB3640;
   --color-third80: rgba(251,54,64,0.8);
+  --color-darkgray: #D9D9D9;
   --font-noto: "Noto Sans TC", sans-serif;
   --font-en: "Bricolage Grotesque", sans-serif;
   --space-80: 8rem;
@@ -86,6 +87,15 @@ ul, ol {
 @media (max-width: 767.98px) {
   .u-title-xl {
     font-size: 3rem;
+  }
+}
+
+.u-title-lg {
+  font-size: 4rem;
+}
+@media (max-width: 767.98px) {
+  .u-title-lg {
+    font-size: 2.4rem;
   }
 }
 
@@ -139,6 +149,18 @@ ul, ol {
   margin-top: 10rem;
 }
 
+.u-mt-50 {
+  margin-top: 5rem;
+}
+
+.u-mt-20 {
+  margin-top: 2rem;
+}
+
+.u-mb-10 {
+  margin-bottom: 1rem;
+}
+
 .c-navbar {
   width: 100%;
   height: 10rem;
@@ -186,14 +208,17 @@ ul, ol {
   width: 90%;
   background-color: var(--color-primary);
   border-top: 1px solid var(--color-secondary);
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
+  display: none;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
   margin: 0 auto;
   padding: 2rem 0;
+}
+.c-footer.is-actived {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
 }
 @media (max-width: 1399.98px) {
   .c-footer {
@@ -318,6 +343,20 @@ ul, ol {
   font-size: var(--space-20);
   padding: var(--space-10) 0;
 }
+.c-profile__icon-box {
+  margin-top: var(--space-10);
+}
+.c-profile__icon {
+  font-size: var(--space-30);
+  -webkit-transition: color 0.5s;
+  transition: color 0.5s;
+}
+.c-profile__icon:not(:first-child) {
+  margin-left: var(--space-20);
+}
+.c-profile__icon:hover {
+  color: var(--color-third);
+}
 
 .l-index {
   margin-top: 10rem;
@@ -391,6 +430,7 @@ ul, ol {
 }
 .l-about__profile {
   border-right: 1px solid var(--color-secondary);
+  background-color: var(--color-darkgray);
 }
 @media (max-width: 767.98px) {
   .l-about__profile {
@@ -398,46 +438,149 @@ ul, ol {
   }
 }
 .l-about__wrap {
-  height: 80vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
-.l-about__content {
-  position: relative;
-  top: 50%;
-  -webkit-transform: translateY(-50%);
-          transform: translateY(-50%);
-  width: 60%;
-  height: 50%;
-  right: 0;
+.l-about__introduction {
+  margin-top: 30vh;
 }
-.l-about__content.--left {
-  left: 0;
-  border-radius: 0 5rem 5rem 0;
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center center;
-  background-color: rgba(251, 54, 64, 0.6);
-  background-blend-mode: overlay;
-  background-image: url(../img/school.jpg);
+.l-about__box {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
 }
-.l-about__content.--right {
-  left: 100%;
-  border-radius: 5rem 0 0 5rem;
-  -webkit-transform: translate(-100%, -50%);
-          transform: translate(-100%, -50%);
+.l-about__introduction-content {
+  width: 20rem;
+  height: 20rem;
+  font-size: 2rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  text-align: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border-radius: 50%;
+  -webkit-transition: -webkit-transform 0.3s;
+  transition: -webkit-transform 0.3s;
+  transition: transform 0.3s;
+  transition: transform 0.3s, -webkit-transform 0.3s;
 }
-.l-about__text {
-  position: absolute;
-  top: 50%;
-  -webkit-transform: translateY(-50%);
-          transform: translateY(-50%);
-  width: 100rem;
-  font-size: 5rem;
+@media (max-width: 1199.98px) {
+  .l-about__introduction-content {
+    width: 15rem;
+    height: 15rem;
+    font-size: 1.6rem;
+  }
 }
-.l-about__text.--left {
-  left: 30%;
+@media (max-width: 575.98px) {
+  .l-about__introduction-content {
+    width: 10rem;
+    height: 10rem;
+    font-size: 1.4rem;
+    padding: 0.5rem;
+  }
 }
-.l-about__text.--right {
-  right: 30%;
+.l-about__introduction-content:nth-child(1) {
+  background-color: #218380;
+  color: var(--color-primary);
+}
+.l-about__introduction-content:nth-child(2) {
+  background-color: #A37C40;
+  color: var(--color-secondary);
+}
+.l-about__introduction-content:nth-child(3) {
+  background-color: #76B041;
+  color: var(--color-secondary);
+}
+.l-about__introduction-content:not(:first-child) {
+  margin-left: var(--space-60);
+}
+@media (max-width: 991.98px) {
+  .l-about__introduction-content:not(:first-child) {
+    margin-left: var(--space-30);
+  }
+}
+.l-about__introduction-content:hover {
+  -webkit-transform: translateY(-3rem);
+          transform: translateY(-3rem);
+}
+.l-about__Self {
+  margin-top: 25vh;
+}
+.l-about__Self-content {
+  width: 70rem;
+  font-size: 2rem;
+  color: var(--color-secondary);
+}
+@media (max-width: 1199.98px) {
+  .l-about__Self-content {
+    width: 50rem;
+    font-size: 1.6rem;
+  }
+}
+@media (max-width: 575.98px) {
+  .l-about__Self-content {
+    width: 90vw;
+    font-size: 1.6rem;
+  }
+}
+.l-about__ability {
+  margin-top: 25vh;
+}
+.l-about__ability-box {
+  --bs-gutter-x: 0;
+}
+.l-about__ability-contentbox {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+.l-about__ability-content {
+  background-color: #4D9DE0;
+  width: 10rem;
+  height: 10rem;
+  border-radius: 50%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
+}
+@media (max-width: 991.98px) {
+  .l-about__ability-content {
+    width: 8rem;
+    height: 8rem;
+  }
+}
+.l-about__ability-content:not(:first-child) {
+  margin-left: var(--space-20);
+}
+.l-about__other {
+  height: 50vh;
+}
+.l-about__title {
+  font-weight: 900;
 }
 
 .l-portfolio__wrap {

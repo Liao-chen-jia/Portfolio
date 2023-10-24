@@ -11,40 +11,84 @@
     --bs-gutter-x: 0
   &__profile
     border-right: 1px solid var(--color-secondary)
+    background-color: var(--color-darkgray)
     +media(sm)
       display: none
   &__wrap
-    //- 每一個撐滿80視窗高度
-    height: 80vh
-  &__content
-    //- 內容格子css設定
-    position: relative
-    top: 50%
-    transform: translateY(-50%)
-    +size(60%, 50%)
-    right: 0
-    &.--left
-      left: 0
-      border-radius: 0 5rem 5rem 0
-      background-repeat: no-repeat
-      background-size: cover
-      background-position: center center
-      background-color: rgba(251,54,64, 0.6)
-      background-blend-mode: overlay
-      background-image: url(../img/school.jpg)
-    &.--right
-      left: 100%
-      border-radius: 5rem 0 0 5rem
-      transform: translate(-100%, -50%)
-      // background-color: var(--color-third)
-  &__text
-    //- 文字設定
-    position: absolute
-    top: 50%
-    transform: translateY(-50%)
-    width: 100rem
-    font-size: 5rem
-    &.--left
-      left: 30%
-    &.--right
-      right: 30%
+    display: flex
+    flex-direction: column
+    align-items: center
+    justify-content: center
+  &__introduction
+    margin-top: 30vh
+  &__box
+    display: flex
+  &__introduction-content
+    +size(20rem)
+    font-size: 2rem
+    +media(lg)
+      +size(15rem)
+      font-size: 1.6rem
+    +media(xs)
+      +size(10rem)
+      font-size: 1.4rem
+      padding: 0.5rem
+    display: flex
+    text-align: center
+    justify-content: center
+    align-items: center
+    border-radius: 50%
+    transition: transform 0.3s
+    //- 到時候再來換顏色
+    &:nth-child(1)
+      background-color: #218380
+      color: var(--color-primary)
+    &:nth-child(2)
+      background-color: #A37C40
+      color: var(--color-secondary)
+    &:nth-child(3)
+      background-color: #76B041
+      color: var(--color-secondary)
+    &:not(:first-child)
+      margin-left: var(--space-60)
+      +media(md)
+        margin-left: var(--space-30)
+    &:hover
+      transform: translateY(-3rem)
+  &__Self
+    margin-top: 25vh
+  &__Self-content
+    width: 70rem
+    font-size: 2rem
+    color: var(--color-secondary)
+    +media(lg)
+      width: 50rem
+      font-size: 1.6rem
+    +media(xs)
+      width: 90vw
+      font-size: 1.6rem
+  &__ability
+    margin-top: 25vh
+  &__ability-box
+    --bs-gutter-x: 0
+  &__ability-contentbox
+    display: flex
+  &__ability-content
+    //- 之後再挑合適的顏色
+    background-color: #4D9DE0
+    +size(10rem)
+    +media(md)
+      +size(8rem)
+    border-radius: 50%
+    display: flex
+    justify-content: center
+    align-items: center
+    flex-shrink: 0
+    &:not(:first-child)
+      margin-left: var(--space-20)
+  &__other
+    height: 50vh
+  &__title
+    font-weight: 900
+  
+  
